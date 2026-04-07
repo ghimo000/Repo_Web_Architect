@@ -93,6 +93,7 @@ function iscriviStudente() {
         let studente = new Studente(nomeStud.value, cognomeStud.value, corsoStud.value);
         listaStudenti.push(studente);
         console.log(studente);
+       
         return true;
     }else{
         return false;
@@ -118,13 +119,16 @@ function clearForm() {
 btn.addEventListener("click", controlla)
 
 /**
- * @param {Array[Studente]} listaStudenti 
+ * @param {Studente[]} listaStudenti 
  */
 function stampaStudenti(listaStudenti) {
-
+    demo.innerHTML = "";
+    listaStudenti.forEach(stud =>{
+        demo.innerHTML += "<li>" + stud.infoStudente() + "</li>";
+    })
 }
 
 btnStampa.addEventListener("click", function () {
-
-    //Stampo gli studenti
+    console.log("Ciao");
+    stampaStudenti(listaStudenti);
 })
