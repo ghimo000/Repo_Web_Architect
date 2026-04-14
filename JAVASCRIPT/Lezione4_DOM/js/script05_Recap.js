@@ -48,12 +48,13 @@ function creaCard(prodotto) {
         console.log("Stai acquistando ", prodotto, " al prezzo di ", prodotto.prezzo);
     })
 
-    card.appendChild(nome);
-    card.appendChild(img);
-    card.appendChild(desc);
-    card.appendChild(prezzo);
-    card.appendChild(btnCompra);
-    
+    // card.appendChild(nome);
+    // card.appendChild(img);
+    // card.appendChild(desc);
+    // card.appendChild(prezzo);
+    // card.appendChild(btnCompra);
+    card.append(nome, img, desc, prezzo, btnCompra);
+
     return card;
 }
 
